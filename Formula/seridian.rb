@@ -5,13 +5,13 @@
 class Seridian < Formula
   desc "Developer CLI for Seridian Auth (identity, OIDC clients, agent tooling)"
   homepage "https://auth.seridian.dev"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/seridian-dev/homebrew-tap/releases/download/v0.2.0/seridian-v0.2.0-aarch64-apple-darwin.tar.gz"
-      sha256 "9d32912ddf4b9e26aa618eee0d6ea142b9d842468cee875fd73806ab6bfb4a26"
+      url "https://github.com/seridian-dev/homebrew-tap/releases/download/v0.3.0/seridian-v0.3.0-aarch64-apple-darwin.tar.gz"
+      sha256 "da4a947714d18667ce0b5f469f837a4f8e3bedadf6c5921ee94c4899dcbe94bb"
     end
   end
 
