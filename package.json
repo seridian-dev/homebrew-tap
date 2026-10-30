@@ -1,0 +1,11 @@
+{
+  "name": "homebrew-tap-git-hooks",
+  "private": true,
+  "description": "Installs the lefthook git hooks for this Homebrew tap. No JavaScript code lives here.",
+  "scripts": {
+    "prepare": "lefthook install"
+  },
+  "devDependencies": {
+    "lefthook": "^2.2.2"
+  }
+}
