@@ -1,0 +1,17 @@
+# Local quality gates (no GitHub Actions). Installed by `bun install` (prepare script in package.json).
+# No test suite here: the checks are syntax checks for the Ruby formula and the bash release script.
+pre-commit:
+  commands:
+    formula-syntax:
+      glob: "Formula/*.rb"
+      run: ruby -c {staged_files} > /dev/null
+    script-syntax:
+      glob: "scripts/*.sh"
+      run: bash -n {staged_files}
+
+pre-push:
+  commands:
+    formula-syntax:
+      run: for f in Formula/*.rb; do ruby -c "$f" > /dev/null || exit 1; done
+    script-syntax:
+      run: for f in scripts/*.sh; do bash -n "$f" || exit 1; done
